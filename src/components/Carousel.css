@@ -24,6 +24,29 @@
 }
 
 /* Optional fade effect */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 4px;
+}
+.carousel-nav.left { left: 10px; }
+.carousel-nav.right { right: 10px; }
+
+/* Ensure product images inside carousel fit nicely */
+.carousel-slide img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
 .carousel-slide {
   opacity: 1;
 }
