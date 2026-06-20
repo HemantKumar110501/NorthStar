@@ -1,0 +1,325 @@
+.profile-page-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+  background-color: var(--color-bg-light);
+  padding: 60px 24px;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.profile-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  padding: 40px;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: fit-content;
+}
+
+.profile-avatar-wrapper {
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+  color: var(--color-bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 700;
+  border: 3px solid var(--color-border);
+}
+
+.profile-name {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 6px;
+}
+
+.profile-badge {
+  font-size: 10px;
+  font-weight: 700;
+  background-color: #ECFDF5;
+  color: #065F46;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+}
+
+.profile-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.profile-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+}
+
+.detail-icon {
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.detail-val {
+  font-size: 13px;
+  color: var(--color-dark);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.btn-logout {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  border-color: #EF4444;
+  color: #EF4444;
+}
+
+.btn-logout:hover {
+  background-color: #FEF2F2;
+  color: #EF4444;
+  border-color: #EF4444;
+}
+
+/* Orders Panel Styling */
+.orders-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.orders-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.no-orders-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  padding: 60px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.no-orders-icon {
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.no-orders-card h3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.no-orders-card p {
+  color: var(--color-text-secondary);
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.order-history-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg-light);
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.order-header-label {
+  display: block;
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.order-header-val {
+  font-size: 13px;
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.order-status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  background-color: #FEF3C7;
+  color: #D97706;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.order-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.order-item-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.order-item-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.order-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.order-item-meta {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.order-item-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.order-shipping-info {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.shipping-label {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.shipping-val {
+  font-size: 13px;
+  color: var(--color-dark);
+  line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .order-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .order-status-badge {
+    align-self: flex-start;
+  }
+}

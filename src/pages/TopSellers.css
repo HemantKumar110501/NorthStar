@@ -1,0 +1,51 @@
+@import "./AllProducts.css";
+
+/* Unique theme styling for Top Sellers page header */
+.sellers-hero-banner {
+  background-color: var(--color-blue);
+  padding: 60px 0;
+  text-align: left;
+  color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-blue-hover);
+}
+
+.sellers-hero-banner .breadcrumbs {
+  padding: 0 0 16px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sellers-hero-banner .breadcrumbs span {
+  color: var(--color-bg-white);
+}
+
+.sellers-hero-banner .breadcrumbs a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition-smooth);
+}
+
+.sellers-hero-banner .breadcrumbs a:hover {
+  color: var(--color-bg-white);
+}
+
+.sellers-hero-title {
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-bg-white);
+  margin-bottom: 8px;
+}
+
+.sellers-hero-subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  line-height: 1.5;
+}

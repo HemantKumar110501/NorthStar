@@ -1,0 +1,88 @@
+@import "./AllProducts.css";
+
+/* Unique theme styling for Season Sale page header */
+.season-sale-hero-banner {
+  background-color: #D32F2F;
+  padding: 60px 0;
+  text-align: left;
+  color: var(--color-bg-white);
+  border-bottom: 1px solid #B71C1C;
+}
+
+.season-sale-hero-banner .breadcrumbs {
+  padding: 0 0 16px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.season-sale-hero-banner .breadcrumbs span {
+  color: var(--color-bg-white);
+}
+
+.season-sale-hero-banner .breadcrumbs a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition-smooth);
+}
+
+.season-sale-hero-banner .breadcrumbs a:hover {
+  color: var(--color-bg-white);
+}
+
+.season-sale-hero-title {
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-bg-white);
+  margin-bottom: 8px;
+}
+
+.season-sale-hero-subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Offer selection sidebar widget */
+.offer-filter-box {
+  padding: 20px 24px;
+}
+
+.offer-selector-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.offer-filter-btn {
+  text-align: left;
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.offer-filter-btn:hover {
+  background-color: var(--color-bg-white);
+  border-color: var(--color-dark);
+  color: var(--color-dark);
+}
+
+.offer-filter-btn.active {
+  background-color: #D32F2F;
+  border-color: #D32F2F;
+  color: var(--color-bg-white);
+  box-shadow: var(--shadow-sm);
+}
