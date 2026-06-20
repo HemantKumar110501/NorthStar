@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 
 import { products, heroBanner, promoBanners } from '../data/products';
+import { resolveAsset } from '../utils/resolveAsset';
 import './Home.css';
 
 export default function Home() {
@@ -11,8 +12,8 @@ export default function Home() {
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <section 
-        className="hero-section" 
+      <section
+        className="hero-section"
         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url(${heroBanner.image})` }}
       >
         <div className="container hero-container">
@@ -52,7 +53,7 @@ export default function Home() {
         <div className="container features-container">
           <div className="feature-item">
             <div className="feature-icon">
-              <img src="/shipping_icon.png" alt="Free Shipping" className="feature-icon-img" />
+              <img src={resolveAsset('/shipping_icon.png')} alt="Free Shipping" className="feature-icon-img" />
             </div>
             <div className="feature-info">
               <h5 className="feature-title">FREE SHIPPING</h5>
@@ -62,7 +63,7 @@ export default function Home() {
 
           <div className="feature-item">
             <div className="feature-icon">
-              <img src="/support_icon.png" alt="Support 24/7" className="feature-icon-img" />
+              <img src={resolveAsset('/support_icon.png')} alt="Support 24/7" className="feature-icon-img" />
             </div>
             <div className="feature-info">
               <h5 className="feature-title">SUPPORT 24/7</h5>
@@ -72,7 +73,7 @@ export default function Home() {
 
           <div className="feature-item">
             <div className="feature-icon">
-              <img src="/return_icon.png" alt="30 Days Return" className="feature-icon-img" />
+              <img src={resolveAsset('/return_icon.png')} alt="30 Days Return" className="feature-icon-img" />
             </div>
             <div className="feature-info">
               <h5 className="feature-title">30 DAYS RETURN</h5>
@@ -82,7 +83,7 @@ export default function Home() {
 
           <div className="feature-item">
             <div className="feature-icon">
-              <img src="/security_icon.png" alt="100% Payment Secure" className="feature-icon-img" />
+              <img src={resolveAsset('/security_icon.png')} alt="100% Payment Secure" className="feature-icon-img" />
             </div>
             <div className="feature-info">
               <h5 className="feature-title">100% PAYMENT SECURE</h5>
@@ -123,24 +124,24 @@ export default function Home() {
         </div>
       </section>
 
-        {/* 5. Top Sellers Section (grid) */}
-        <section className="section products-section">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-main-title">Top Sellers</h2>
-              <p className="section-sub-title">Best‑selling items curated for you.</p>
-            </div>
-            <div className="products-grid top-sellers-grid">
-              {topSellerProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-            <div className="section-cta-wrapper" style={{ marginTop: '20px' }}>
-              <Link to="/top-sellers" className="btn btn-primary">Shop Now</Link>
-            </div>
-
+      {/* 5. Top Sellers Section (grid) */}
+      <section className="section products-section">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-main-title">Top Sellers</h2>
+            <p className="section-sub-title">Best‑selling items curated for you.</p>
           </div>
-        </section>
+          <div className="products-grid top-sellers-grid">
+            {topSellerProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+          <div className="section-cta-wrapper" style={{ marginTop: '20px' }}>
+            <Link to="/top-sellers" className="btn btn-primary">Shop Now</Link>
+          </div>
+
+        </div>
+      </section>
 
 
     </div>

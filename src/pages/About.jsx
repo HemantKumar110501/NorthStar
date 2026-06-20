@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import { founders, testimonials } from '../data/products';
+import { resolveAsset } from '../utils/resolveAsset';
 
 import './About.css';
 
 export default function About() {
-  const introBanner = '/about_banner.png';
-  const promoLeftImage = '/about_woman.png';
-  const promoRightImage = '/about_man.png';
+  const introBanner = resolveAsset('/about_banner.png');
+  const promoLeftImage = resolveAsset('/about_woman.png');
+  const promoRightImage = resolveAsset('/about_man.png');
 
   return (
     <div className="about-page">

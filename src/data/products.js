@@ -1,3 +1,5 @@
+import { resolveAsset } from '../utils/resolveAsset';
+
 const staticProducts = [
   // Discover New Arrivals (8 Original + 8 New)
   {
@@ -654,27 +656,27 @@ const adjustPrice = (product) => {
 };
 
 export const products = [
-  ...staticProducts.map(p => adjustPrice({ ...p, price: Math.round(p.price * 40), originalPrice: p.originalPrice ? Math.round(p.originalPrice * 40) : null })),
-  ...generatedSaleProducts.map(p => adjustPrice({ ...p, price: Math.round(p.price * 40), originalPrice: p.originalPrice ? Math.round(p.originalPrice * 40) : null }))
+  ...staticProducts.map(p => adjustPrice({ ...p, image: resolveAsset(p.image), price: Math.round(p.price * 40), originalPrice: p.originalPrice ? Math.round(p.originalPrice * 40) : null })),
+  ...generatedSaleProducts.map(p => adjustPrice({ ...p, image: resolveAsset(p.image), price: Math.round(p.price * 40), originalPrice: p.originalPrice ? Math.round(p.originalPrice * 40) : null }))
 ];
 
 export const heroBanner = {
   title: 'STYLIST PICKS BEAT THE HEAT',
   subtitle: '',
-  image: '/hero_woman_custom.jpg'
+  image: resolveAsset('/hero_woman_custom.jpg')
 };
 
 export const promoBanners = {
   left: {
     title: 'PEACE OF MIND',
     subtitle: 'A one-stop platform for all your fashion needs, hassle-free. Buy with a peace of mind.',
-    image: '',
+    image: resolveAsset(''),
     buttonText: 'BUY NOW'
   },
   right: {
     title: 'BUY 2 GET 1 FREE',
     subtitle: 'End of season sale. Buy any 2 items of your choice and get 1 free.',
-    image: '',
+    image: resolveAsset(''),
     buttonText: 'BUY NOW'
   }
 };

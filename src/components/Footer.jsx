@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { resolveAsset } from '../utils/resolveAsset';
 import './Footer.css';
 
 export default function Footer() {
@@ -91,10 +92,10 @@ export default function Footer() {
           </div>
           
           <div className="footer-payments">
-            <img src="/payment_visa.png" alt="Visa" className="payment-icon-img" />
-            <img src="/payment_mastercard.png" alt="MasterCard" className="payment-icon-img" />
-            <img src="/payment_paypal.png" alt="PayPal" className="payment-icon-img" />
-            <img src="/payment_visa_electron.png" alt="Visa Electron" className="payment-icon-img" />
+            <img src={resolveAsset('/payment_visa.png')} alt="Visa" className="payment-icon-img" />
+            <img src={resolveAsset('/payment_mastercard.png')} alt="MasterCard" className="payment-icon-img" />
+            <img src={resolveAsset('/payment_paypal.png')} alt="PayPal" className="payment-icon-img" />
+            <img src={resolveAsset('/payment_visa_electron.png')} alt="Visa Electron" className="payment-icon-img" />
           </div>
         </div>
       </div>
