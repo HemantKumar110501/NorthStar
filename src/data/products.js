@@ -458,7 +458,90 @@ const staticProducts = [
     reviewsCount: 19,
     description: 'Classic slim fit chinos crafted from soft, stretch cotton twill for optimal movement and comfort. Perfect to transition seamlessly from work to weekend.',
     section: 'general'
-  }
+  },
+    // Added Brown Shirt
+    {
+      id: 'brown-casual-shirt',
+      name: 'Brown Casual Shirt',
+      price: 34.00,
+      originalPrice: null,
+      image: '/brown_casual_shirt.png',
+      category: 'Men, Shirt, Casual',
+      tags: ['Shirt', 'Brown', 'Cotton'],
+      rating: 4,
+      reviewsCount: 12,
+      description: 'A comfortable brown casual shirt perfect for everyday wear, made from soft cotton.',
+      section: 'new-arrivals'
+    },
+    // Added Maroon Shirt
+    {
+      id: 'maroon-casual-shirt',
+      name: 'Maroon Casual Shirt',
+      price: 36.00,
+      originalPrice: null,
+      image: '/maroon_casual_shirt.png',
+      category: 'Men, Shirt, Casual',
+      tags: ['Shirt', 'Maroon', 'Cotton'],
+      rating: 4,
+      reviewsCount: 10,
+      description: 'Stylish maroon shirt suitable for both casual and semi-formal occasions.',
+      section: 'new-arrivals'
+    },
+    // Added Black Belt
+    {
+      id: 'black-leather-belt',
+      name: 'Black Leather Belt',
+      price: 22.00,
+      originalPrice: null,
+      image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80',
+      category: 'Unisex, Accessories, Belt',
+      tags: ['Belt', 'Black', 'Leather'],
+      rating: 5,
+      reviewsCount: 18,
+      description: 'Sleek black leather belt with a polished buckle, perfect for any outfit.',
+      section: 'new-arrivals'
+    },
+    // Added Brown Belt
+    {
+      id: 'brown-leather-belt',
+      name: 'Brown Leather Belt',
+      price: 24.00,
+      originalPrice: null,
+      image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&auto=format&fit=crop&q=80',
+      category: 'Unisex, Accessories, Belt',
+      tags: ['Belt', 'Brown', 'Leather'],
+      rating: 5,
+      reviewsCount: 15,
+      description: 'Classic brown leather belt with a sturdy buckle, adds elegance to any look.',
+      section: 'new-arrivals'
+    },
+    // Added Additional Sunglasses Shades
+    {
+      id: 'sunglasses-shade-2',
+      name: 'Retro Round Sunglasses',
+      price: 45.00,
+      originalPrice: null,
+      image: '/retro_round_sunglasses.png',
+      category: 'Unisex, Accessories, Sunglasses',
+      tags: ['Sunglasses', 'Round', 'Retro'],
+      rating: 4,
+      reviewsCount: 22,
+      description: 'Vintage round sunglasses with UV protection, perfect for sunny days.',
+      section: 'new-arrivals'
+    },
+    {
+      id: 'sunglasses-shade-3',
+      name: 'Cat Eye Sunglasses',
+      price: 48.00,
+      originalPrice: null,
+      image: '/women_cat_eye_sunglasses.png',
+      category: 'Unisex, Accessories, Sunglasses',
+      tags: ['Sunglasses', 'Cat Eye', 'Fashion'],
+      rating: 5,
+      reviewsCount: 30,
+      description: 'Elegant cat eye sunglasses that add a bold statement to your style.',
+      section: 'new-arrivals'
+    },
 ];
 
 // Programmatic expansion for Season Sale (50 items)
