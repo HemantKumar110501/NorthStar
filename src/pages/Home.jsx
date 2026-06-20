@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
-import Carousel from '../components/Carousel';
+
 import { products, heroBanner, promoBanners } from '../data/products';
 import './Home.css';
 
 export default function Home() {
   const newArrivals = products.filter((p) => p.section === 'new-arrivals').slice(0, 8);
-  const saleProducts = products.filter((p) => p.section === 'sale').slice(0, 5);
+  const topSellerProducts = products.filter((p) => p.section === 'top-sellers').slice(0, 8);
 
   return (
     <div className="home-page">
@@ -123,21 +123,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Top Sellers Section with Super Sale Carousel (5 Slides) */}
-      <section className="section products-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-main-title">Super Sale</h2>
-            <p className="section-sub-title">Limited time offers on top products.</p>
+        {/* 5. Top Sellers Section (grid) */}
+        <section className="section products-section">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-main-title">Top Sellers</h2>
+              <p className="section-sub-title">Best‑selling items curated for you.</p>
+            </div>
+            <div className="products-grid top-sellers-grid">
+              {topSellerProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+            <div className="section-cta-wrapper" style={{ marginTop: '20px' }}>
+              <Link to="/top-sellers" className="btn btn-primary">Shop Now</Link>
+            </div>
+
           </div>
-          <Carousel items={saleProducts} />
-          <div className="section-cta-wrapper" style={{ marginTop: '20px' }}>
-            <Link to="/season-sale" className="btn btn-primary">
-              VIEW ALL SALES
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+
+
     </div>
   );
 }

@@ -23,16 +23,22 @@ export default function Carousel({ items }) {
   };
 
   return (
-    <div className="carousel-container">
-      <button className="carousel-nav left" onClick={prevSlide} aria-label="Previous slide">
-        &#9664;
-      </button>
-      <div className="carousel-slide" key={items[current].id}>
-        <ProductCard product={items[current]} />
+    <div className="carousel-wrapper">
+      <div className="carousel-container">
+        <button className="carousel-nav left" onClick={prevSlide} aria-label="Previous slide">
+          &#9664;
+        </button>
+        <div className="carousel-track" style={{ transform: `translateX(-${current * 100}%)` }}>
+          {items.map((item) => (
+            <div className="carousel-slide" key={item.id}>
+              <ProductCard product={item} />
+            </div>
+          ))}
+        </div>
+        <button className="carousel-nav right" onClick={nextSlide} aria-label="Next slide">
+          &#9654;
+        </button>
       </div>
-      <button className="carousel-nav right" onClick={nextSlide} aria-label="Next slide">
-        &#9654;
-      </button>
     </div>
   );
 }
